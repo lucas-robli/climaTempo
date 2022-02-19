@@ -1,0 +1,54 @@
+.card {
+  // background-image: url("../../../assets/rj.jpg");
+  background-color: rgb(44, 131, 131);
+  background-size: cover;
+  width: 600px;
+  height: 350px;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.time-font {
+  font-size: 50px;
+}
+
+.sm-font {
+  font-size: 18px;
+}
+
+.med-font {
+  font-size: 28px;
+}
+
+.large-font {
+  font-size: 60px;
+}
+
+.dados-clima {
+  font-size: 25px;
+}
+
+.dados-texto {
+  padding-bottom: -10px;
+}
+
+.img {
+  text-align: right;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 446px) {
+   .dados-clima {
+    font-size: 20px;
+  }
+
+  .dados-texto {
+    font-size: 14px;
+  }
+
+  #title-p {
+    font-size: 15px;
+  }
+}

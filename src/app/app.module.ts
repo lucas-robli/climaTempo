@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ClimaComponent } from './components/clima/clima.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClimaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

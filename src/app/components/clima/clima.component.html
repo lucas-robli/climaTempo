@@ -1,0 +1,88 @@
+<div class="container-fluid px-1 px-md-4 py-5 mx-auto">
+  <div class="row d-flex justify-content-center px-3">
+
+      <div class="col-md-8">
+          <div class="input-group mb-3">
+              <input type="text" class="form-control input-text" #userInput
+                  placeholder="Digite o nome da cidade...." aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                  <button class="btn btn-outline-warning btn-lg" type="button" (click)="getCity(userInput.value)">
+                      <i class="fa fa-search"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="container">
+              <div class="row">
+                  <div class="col-7">
+                      <h2 class="ml-auto mr-4 mt-3 mb-0">{{clima.name}}, {{clima.sys.country}}</h2>
+                      <p class="ml-auto mr-4 mb-0 med-font" id="title-p">Dados Meteorológicos</p>
+                      <h1 class="ml-auto mr-4 large-font">{{clima.main.temp | number: '1.0-0'}} &#176;</h1>
+
+                  </div>
+
+                  <div class="col-5 ">
+                      <div class="img">
+                          <span>
+                              <img src="assets/{{ clima.weather[0].icon }}.png" alt="01d.png">
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-6 col-sm-3" style="padding-top: 10px;">
+                      <span class="dados-texto">
+                          Umidade
+                      </span>
+                  </div>
+                  <div class="col-6 col-sm-5">
+                      <span class="dados-clima">
+                          <strong>{{ clima.main.humidity}}%</strong>
+                      </span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="container">
+              <div class="row ">
+                  <div class="col-6 col-sm-3" style="padding-top: 10px;">
+                      <span class="dados-texto ">
+                          Nascer do Sol
+                      </span>
+                  </div>
+                  <div class="col-6 col-sm-5">
+                      <span class="dados-clima">
+                          <strong>{{ clima.sys.sunrise * 1000 | date: 'HH:mm'}}</strong>
+                      </span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="container">
+              <div class="row">
+                  <div class="col-6 col-sm-3" style="padding-top: 10px;">
+                      <span class="dados-texto">
+                          Por do Sol
+                      </span>
+                  </div>
+                  <div class="col-6 col-sm-5">
+                      <span class="dados-clima">
+                          <strong>{{ clima.sys.sunset * 1000 | date: 'HH:mm'}}</strong>
+                      </span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- <div class="container">
+              <p class="ml-4 mb-4">{{this.dataAtual.toLocaleString()}}</p>
+          </div> -->
+
+      </div>
+
+
+  </div>
+</div>
